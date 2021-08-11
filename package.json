@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc"
+    "compile": "tsc --noEmit",
+    "lint": "eslint src",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "next": "11.0.1",
