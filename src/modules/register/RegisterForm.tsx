@@ -15,7 +15,7 @@ const schema: SchemaOf<FormData> = yup.object().shape({
   fieldPass: yup.string().required(),
 });
 
-export const SignInForm: FC = () => {
+export const RegisterForm: FC = () => {
   const {
     register,
     handleSubmit,
@@ -55,7 +55,7 @@ export const SignInForm: FC = () => {
         />
       </div>
       <Button type="submit" className="w-full">
-        Iniciar sesión
+        Registrarse
       </Button>
     </form>
   );

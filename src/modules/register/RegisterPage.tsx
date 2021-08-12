@@ -1,24 +1,24 @@
 import React, { FC } from 'react';
 import { Button } from 'ui/Button';
-import { SignInForm } from './SignInForm';
+import { RegisterForm } from './RegisterForm';
 import { useRouter } from 'next/router';
 import { GridAuthUser } from 'modules/layouts/GridAuthUser';
 import { HeaderController } from 'modules/display/HeaderController';
 
-export const SignInPage: FC = () => {
+export const Register: FC = () => {
   const router = useRouter();
 
   return (
     <>
-      <HeaderController title="Iniciar sesión" />
+      <HeaderController title="Registrarse" />
       <GridAuthUser>
-        <SignInForm />
+        <RegisterForm />
         <Button
           className="w-full mt-4"
           color="transparent"
-          onClick={() => router.push('/register')}
+          onClick={() => router.push('/')}
         >
-          Registrarse
+          Ir a inicio
         </Button>
       </GridAuthUser>
     </>
