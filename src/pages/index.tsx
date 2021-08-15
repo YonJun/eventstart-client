@@ -1,3 +1,3 @@
-import { SignInPage } from 'modules/auth/SignInPage';
+import { LoginPage } from 'modules/login/LoginPage';
 
-export default SignInPage;
+export default LoginPage;

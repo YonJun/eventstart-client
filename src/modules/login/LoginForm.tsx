@@ -5,6 +5,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { SchemaOf } from 'yup';
+import { useTokenStore } from 'modules/auth/useTokenStore';
+import { useRouter } from 'next/router';
 
 type FormData = {
   fieldEmail: string;
@@ -15,7 +17,9 @@ const schema: SchemaOf<FormData> = yup.object().shape({
   fieldPass: yup.string().required(),
 });
 
-export const SignInForm: FC = () => {
+export const LoginForm: FC = () => {
+  const { push } = useRouter();
+  const setTokens = useTokenStore((s) => s.setTokens);
   const {
     register,
     handleSubmit,
@@ -28,7 +32,14 @@ export const SignInForm: FC = () => {
     },
   });
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    setTokens({
+      accessToken: 'qpakcmckauqjfjaksfsdajq',
+      refreshToken: 'fsdamqdifsaifñjksjñncj',
+    });
+    push('/dash');
+  });
 
   return (
     <form className="space-y-5" onSubmit={onSubmit}>
