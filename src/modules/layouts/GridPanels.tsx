@@ -6,7 +6,7 @@ import { MainHeader } from 'ui/header/MainHeader';
 interface LeftPanelProps {}
 
 const HeaderWrapper: FC = ({ children }) => (
-  <div className={`flex mb-7 h-6 items-center`}>{children}</div>
+  <div className={`flex mb-16 h-12 items-center`}>{children}</div>
 );
 
 export const LeftPanel: React.FC<LeftPanelProps> = ({ children }) => {
