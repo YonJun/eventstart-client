@@ -1,5 +1,6 @@
 import React from 'react';
-import { SidebarLayout } from 'modules/sidebar/SidebarLayout';
+import { SidebarLayout } from 'ui/sidebar/SidebarLayout';
+import { MainPanel } from './GridPanels';
 import { MainLayout } from './MainLayout';
 
 interface DefaultDesktopLayoutProps {}
@@ -7,5 +8,9 @@ interface DefaultDesktopLayoutProps {}
 export const DefaultDesktopLayout: React.FC<DefaultDesktopLayoutProps> = ({
   children,
 }) => {
-  return <MainLayout leftPanel={<SidebarLayout />}>{children}</MainLayout>;
+  return (
+    <MainLayout leftPanel={<SidebarLayout />}>
+      <MainPanel>{children}</MainPanel>
+    </MainLayout>
+  );
 };

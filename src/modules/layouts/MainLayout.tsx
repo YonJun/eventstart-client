@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { MainInnerGrid } from './MainInnerGrid';
-import { useScreenType } from 'hooks/useScreenType';
+import { useScreenType } from 'shared-hooks/useScreenType';
 import { LeftPanel } from './GridPanels';
 
 interface MainLayoutProps {
@@ -12,7 +12,6 @@ interface MainLayoutProps {
 export const MainLayout: FC<MainLayoutProps> = ({
   children,
   leftPanel = <div />,
-  rightPanel = <div />,
 }) => {
   const screenType = useScreenType();
 

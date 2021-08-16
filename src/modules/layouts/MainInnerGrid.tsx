@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useScreenType } from 'hooks/useScreenType';
+import { useScreenType } from 'shared-hooks/useScreenType';
 
 interface MainInnerGridProps {
   className?: string;
