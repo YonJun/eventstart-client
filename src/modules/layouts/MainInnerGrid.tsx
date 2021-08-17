@@ -10,7 +10,7 @@ export const MainInnerGrid: FC<MainInnerGridProps> = ({
 }) => {
   const screenType = useScreenType();
 
-  let gridTemplateColumns = '235px 940px';
+  let gridTemplateColumns = '285px 800px';
   let myClassName = ``;
 
   if (screenType === '2-cols') {
@@ -25,11 +25,11 @@ export const MainInnerGrid: FC<MainInnerGridProps> = ({
   return (
     <div
       id="main"
-      className={`relative bg-red-500 ${myClassName} ${className}`}
+      className={`relative ${myClassName} ${className}`}
       style={{
         display: screenType === 'fullscreen' ? 'flex' : 'grid',
         gridTemplateColumns,
-        columnGap: 60,
+        columnGap: 0, //60,
       }}
     >
       {children}

@@ -52,7 +52,7 @@ export const MainLayout: FC<MainLayoutProps> = ({
 
   return (
     <>
-      <div className="flex flex-col items-center w-full bg-green-700">
+      <div className="flex flex-col items-center w-full">
         <MainInnerGrid>{middle}</MainInnerGrid>
       </div>
     </>

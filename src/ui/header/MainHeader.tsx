@@ -9,9 +9,9 @@ export const MainHeader: React.FC<MainHeaderProps> = () => {
   const screenType = useScreenType();
 
   return (
-    <div className="flex flex-1 justify-center w-full bg-red-400">
+    <div className="flex flex-1 justify-center w-full">
       {screenType === 'fullscreen' ? (
-        <div className="flex mr-4 bg-green-200">
+        <div className="flex mr-4">
           <LeftHeader />
         </div>
       ) : (

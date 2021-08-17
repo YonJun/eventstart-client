@@ -23,7 +23,7 @@ export const LeftPanel: React.FC<LeftPanelProps> = ({ children }) => {
 export const MainPanel: React.FC<LeftPanelProps> = ({ children }) => {
   return (
     <GridPanel>
-      <div className="flex sticky top-0 w-full flex-col z-10 pt-5 bg-green-600">
+      <div className="flex sticky top-0 w-full flex-col z-10 pt-5">
         <HeaderWrapper>
           <MainHeader />
         </HeaderWrapper>

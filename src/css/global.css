@@ -13,3 +13,7 @@
   --color-primary-800: #230055;
   --color-primary-900: #0e0022;
 }
+
+body {
+  background-color: #f5f5f5;
+}
