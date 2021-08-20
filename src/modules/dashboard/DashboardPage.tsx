@@ -12,15 +12,8 @@ export const DashboardPage: PageComponent<LoungePageProps> = () => {
     <WaitForAuth>
       <HeaderController embed={{}} title={'Dashboard'} />
       <DefaultDesktopLayout>
-        <div>
-          {[...(Array(30).keys() as any)].map((idx) => (
-            <p key={idx}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              dolore suscipit at explicabo maxime saepe sit? Praesentium fugit
-              nemo laudantium illo ut voluptate natus? Quasi tempore culpa
-              perspiciatis debitis inventore!
-            </p>
-          ))}
+        <div className="text-center" style={{ marginTop: '30vh' }}>
+          En progreso!!
         </div>
       </DefaultDesktopLayout>
     </WaitForAuth>

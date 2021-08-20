@@ -32,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button
       disabled={disabled || loading}
-      className={`capitalize duration-200 flex items-center py-2 px-6 rounded-lg relative text-sm text-white transition-colors transform ${colorClassnames[color]} active:translate-y-1 disabled:translate-y-0 disabled:cursor-not-allowed
+      className={`duration-200 flex items-center py-2 px-6 rounded-lg relative text-sm text-white transition-colors transform ${colorClassnames[color]} active:translate-y-1 disabled:translate-y-0 disabled:cursor-not-allowed
        ${className}`}
       data-testid="button"
       {...props}
@@ -44,8 +44,10 @@ export const Button: React.FC<ButtonProps> = ({
           <Spinner size="4" />
         </span>
       )}
-      <span className={`${loading ? 'opacity-0' : ``} w-full `}>
-        {icon && <span className={`mr-2 items-center`}>{icon}</span>}
+      <span
+        className={`${loading ? 'opacity-0' : ``} w-full flex items-center`}
+      >
+        {icon && <span className={`mr-2 flex items-start`}>{icon}</span>}
         {children}
       </span>
     </button>
