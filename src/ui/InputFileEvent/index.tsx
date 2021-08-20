@@ -1,8 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { Edit } from '@styled-icons/boxicons-regular';
-let i = 1;
+
 export const InputFileEvent = () => {
-  console.log('render', i++);
   const [img, set_img] = useState<File | null>(null);
 
   const handleFileSelected = (event: ChangeEvent<HTMLInputElement>) => {
@@ -31,6 +30,7 @@ export const InputFileEvent = () => {
         id="event-img"
         onChange={handleFileSelected}
         className="hidden"
+        accept="image/*"
       />
       <label
         htmlFor="event-img"
