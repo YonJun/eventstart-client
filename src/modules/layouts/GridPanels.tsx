@@ -11,7 +11,7 @@ const HeaderWrapper: FC = ({ children }) => (
 
 export const LeftPanel: React.FC<LeftPanelProps> = ({ children }) => {
   return (
-    <FixedGridPanel>
+    <FixedGridPanel className="z-20">
       <HeaderWrapper>
         <LeftHeader />
       </HeaderWrapper>
