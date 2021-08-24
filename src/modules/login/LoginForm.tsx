@@ -6,7 +6,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { SchemaOf } from 'yup';
 import { useTokenStore } from 'modules/auth/useTokenStore';
-import { useRouter } from 'next/router';
 
 type FormData = {
   fieldEmail: string;
@@ -18,7 +17,6 @@ const schema: SchemaOf<FormData> = yup.object().shape({
 });
 
 export const LoginForm: FC = () => {
-  const { push } = useRouter();
   const setTokens = useTokenStore((s) => s.setTokens);
   const {
     register,
@@ -38,7 +36,7 @@ export const LoginForm: FC = () => {
       accessToken: 'qpakcmckauqjfjaksfsdajq',
       refreshToken: 'fsdamqdifsaifñjksjñncj',
     });
-    push('/dash');
+    // push(`/${ROOT_AUTH}`);
   });
 
   return (
