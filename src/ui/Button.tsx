@@ -45,7 +45,9 @@ export const Button: React.FC<ButtonProps> = ({
         </span>
       )}
       <span
-        className={`${loading ? 'opacity-0' : ``} w-full flex items-center`}
+        className={`${
+          loading ? 'opacity-0' : ``
+        } w-full flex items-center justify-center`}
       >
         {icon && <span className={`mr-2 flex items-start`}>{icon}</span>}
         {children}
