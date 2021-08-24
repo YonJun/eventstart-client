@@ -2,9 +2,9 @@ import { useMediaQuery } from 'react-responsive';
 import { theme } from 'twin.macro';
 
 const SizeQuery = {
-  '3col': theme`screens.xl`,
-  '2col': theme`screens.lg`,
-  '1col': theme`screens.md`,
+  '3col': theme`screens.lg`,
+  '2col': theme`screens.md`,
+  '1col': theme`screens.sm`,
 };
 
 export const useScreenType = () => {

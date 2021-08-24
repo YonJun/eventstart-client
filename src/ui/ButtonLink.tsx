@@ -16,18 +16,18 @@ export const ButtonLink: FC<ButtonLinkProps> = ({ to, icon, label }) => {
     : 'bg-transparent text-label';
 
   return (
-    <div className="group xl:w-full">
+    <div className="group lg:w-full">
       <button
-        className={`flex  h-10 items-center font-bold px-2 rounded uppercase hover:bg-primary-400 hover:text-white ${activeCls} w-auto xl:w-full float-right`}
+        className={`flex  h-10 items-center font-bold px-2 rounded uppercase hover:bg-primary-400 hover:text-white ${activeCls} w-auto lg:w-full float-right`}
         onClick={() => push(to)}
       >
         {icon && (
-          <span className={`xl:mr-2 group-hover:mr-2  flex items-center`}>
+          <span className={`lg:mr-2 group-hover:mr-2  flex items-center`}>
             {icon}
           </span>
         )}
 
-        <span className="truncate hidden xl:block group-hover:block">
+        <span className="truncate hidden lg:block group-hover:block">
           {label}
         </span>
       </button>

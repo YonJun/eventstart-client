@@ -7,7 +7,7 @@ import { ButtonLink } from 'ui/ButtonLink';
 
 export const SidebarLayout: FC = () => {
   return (
-    <div className="bg-white w-full shadow p-3 xl:px-10 xl:py-16">
+    <div className="bg-white w-full shadow px-3 py-16 lg:px-10 ">
       <div className="space-y-5 flex flex-col items-start">
         <ButtonLink
           to="/dash"
